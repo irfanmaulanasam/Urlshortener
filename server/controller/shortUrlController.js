@@ -30,6 +30,7 @@ class shortUrlController{
 
   static async createUrl(req,res){
     const longUrl = req.body.longUrl;
+    console.log(req.body);
     const baseUrl = config.get("baseURL");
       if(!validUrl.isUri(baseUrl)){
           return res.status(401).json("Internal error. Please come back later.");
@@ -61,7 +62,7 @@ class shortUrlController{
               return res.status(500).json("Internal Server error " + err.message);
           }
       }else{
-          res.status(400).json("Invalid URL. Please enter a vlaid url for shortening.");
+          res.status(400).json("Invalid URL. Please enter a valid url for shortening.");
       }    
   }
 }

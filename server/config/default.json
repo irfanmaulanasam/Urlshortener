@@ -1,6 +1,6 @@
 {
   "mongoURI": "mongodb://127.0.0.1:27017/antariksa",
-  "baseURL" : "http://localhost:8000/v1",
+  "baseURL" : "http://localhost:8000/",
   "allowedClick" : 10,
   "secret":"underwearIS4Cream"
 } 

@@ -16,7 +16,6 @@ class userController{
     User.findById(req.payload.id).then(function(user){
       if(!user){ return res.sendStatus(401); }
   
-      // only update fields that were actually passed...
       if(typeof req.body.user.username !== 'undefined'){
         user.username = req.body.user.username;
       }
